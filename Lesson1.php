@@ -5,36 +5,36 @@
 //  3. Описать поведение класса из п.1 (методы).
 class Product
 {
-    protected $name;
-    protected $price;
-    protected $stockQuantity;
+	protected $name;
+	protected $price;
+	protected $stockQuantity;
 
-    public function __construct(string $name, float $price, int $stockQuantity)
-    {
-        $this->name = $name;
-        $this->price = $price;
-        $this->stockQuantity = $stockQuantity;
-    }
+	public function __construct(string $name, float $price, int $stockQuantity)
+	{
+		$this->name = $name;
+		$this->price = $price;
+		$this->stockQuantity = $stockQuantity;
+	}
 
-    public function getName()
-    {
-        echo "Название: $this->name \n";
-    }
+	public function getName()
+	{
+		echo "Название: $this->name \n";
+	}
 
-    public function setName($newName)
-    {
-        $this->price = $newName;
-    }
+	public function setName($newName)
+	{
+		$this->price = $newName;
+	}
 
-    public function getPrice()
-    {
-        echo "Цена: $this->price \n";
-    }
+	public function getPrice()
+	{
+		echo "Цена: $this->price \n";
+	}
 
-    public function setPrice($newPrice)
-    {
-        $this->price = $newPrice;
-    }
+	public function setPrice($newPrice)
+	{
+		$this->price = $newPrice;
+	}
 }
 
 $phone1 = new Product('Xiaomi', 500.56, 1000);
@@ -48,19 +48,19 @@ $phone1->getPrice();
 //  4. Придумать наследников класса из п.1. Чем они будут отличаться?
 class Car extends Product
 {
-    protected $brand;
+	protected $brand;
 
-    public function __construct(string $name, float $price, int $stockQuantity, string $brand)
-    {
-        parent::__construct($name, $price, $stockQuantity);
-        $this->brand = $brand;
-    }
+	public function __construct(string $name, float $price, int $stockQuantity, string $brand)
+	{
+		parent::__construct($name, $price, $stockQuantity);
+		$this->brand = $brand;
+	}
 
-    public function getName()
-    {
-        parent::getName();
-        echo "Марка: $this->brand \n";
-    }
+	public function getName()
+	{
+		parent::getName();
+		echo "Марка: $this->brand \n";
+	}
 }
 $car1 = new Car('4X4', 123456.70, 10, 'LADA');
 $car1->getName();
@@ -69,10 +69,10 @@ $car1->getName();
 
 //  5. Дан код:
 class A {
-    public function foo() {
-        static $x = 0;
-        echo ++$x;
-    }
+	public function foo() {
+		static $x = 0;
+		echo ++$x;
+	}
 }
 $a1 = new A();
 $a2 = new A();
@@ -85,12 +85,13 @@ $a2->foo();
 //  то при каждом вызове метода foo, не важно у какого объекта переменная x будет увеличиваться на 1 и выводиться.
 
 
+
 //  6. Немного изменим п.5:
 class A {
-    public function foo() {
-        static $x = 0;
-        echo ++$x;
-    }
+	public function foo() {
+		static $x = 0;
+		echo ++$x;
+	}
 }
 class B extends A {
 }
@@ -108,10 +109,10 @@ $b1->foo();
 
 //  7. *Дан код:
 class A {
-    public function foo() {
-        static $x = 0;
-        echo ++$x;
-    }
+	public function foo() {
+		static $x = 0;
+		echo ++$x;
+	}
 }
 class B extends A {
 }
